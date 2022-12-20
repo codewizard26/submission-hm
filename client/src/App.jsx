@@ -7,6 +7,9 @@ import './App.css';
 
 class App extends Component {
 
+ 
+  
+
   constructor(props) {
     super(props);
   
@@ -25,6 +28,7 @@ class App extends Component {
   async componentDidMount() {
     await this.loadWeb3();
     await this.loadBlockchainData();
+    
   }
 
   //check ethereum provider
@@ -44,6 +48,7 @@ class App extends Component {
   async loadBlockchainData() {
     const accounts = await window.web3.eth.requestAccounts()
     this.setState({ account: accounts[0] })
+    
 
     const network_id = await window.web3.eth.net.getId()
     const networkData = Cryptowiz.networks[network_id]
@@ -60,7 +65,7 @@ class App extends Component {
 
         const CryptoWiz = await contract.methods.Cryptowiz(i - 1).call()
         this.setState({
-          cryptowiz_arr: [...this.state.cryptowiz_arr, CryptoWiz]
+          cryptowiz_arr: [CryptoWiz]
 
         })
 
@@ -85,11 +90,12 @@ class App extends Component {
 
   render() {
     return (
+      
       <div className='container-filed '>
         <nav className='navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow'>
           <div className='navbar-brand col-sm-3 col-md-3 mr-0 '>
             CryptoWiz NFTs (Non Fungible Tokens)
-            <div className='text-right'>Wallet Address : {this.state.account}</div>
+            <div className='text-right'>Wallet Address : {JSON.parse(localStorage.getItem("username")).value}</div>
 
           </div>
         </nav>
@@ -98,7 +104,7 @@ class App extends Component {
           <div className='row'>
             <main role='main' className='col-lg-12 d-flex text-center'>
               <div className='content mr-auto ml-auto'>
-                <h1>Cryptowiz NFT Marketplace</h1>
+                <h1>Billing For Malls (Store Dashboard)</h1>
 
               </div>
             </main>
@@ -110,7 +116,7 @@ class App extends Component {
             this.mint(cryptowiz)
           }} className="text-center">
 
-            <input type='text' placeholder='Add a file location' className=' mt-4 mb-1' style={{ padding: .5 + "rem" }} ref={(input) => this.cryptoWiz = input} />
+            <input type='text' placeholder='Add Items Name manually' className=' mt-4 mb-1 ' style={{ padding: .5 + "rem",width:50+'rem'}} ref={(input) => this.cryptoWiz = input} />
             <input type='submit' className="btn btn-primary" style={{ margin: 6 + 'px', padding: .5 + "rem" }} value='MINT' />
           </form>
         </div>
@@ -123,10 +129,9 @@ class App extends Component {
                  <div>
                   <MDBCard  className='token img' style={{maxWidth:'22rem'}}>
                   <MDBCardBody className='row'>
-                    <MDBCardImage src='' alt='nft-image'></MDBCardImage>
-                    <MDBCardTitle>Cryptowiz</MDBCardTitle> 
-                    <MDBCardText>The Cryptowiz are 20 unique team of wizards present all over the galaxy. Unique identity of each is present over the ethereum blockchain</MDBCardText>
-                    <MDBBtn href={cryptowiz}>Download</MDBBtn>
+                    <MDBCardTitle>Customer Unstoppable Domain-Name</MDBCardTitle> 
+                    <MDBCardText>{this.state.cryptowiz_arr}</MDBCardText>
+                    <MDBBtn href={cryptowiz}>Transfer Nft to owner</MDBBtn>
                   </MDBCardBody>
                   </MDBCard>
                  </div>
@@ -134,6 +139,7 @@ class App extends Component {
             )
           })}
         </div>
+        
 
       </div>
     )
