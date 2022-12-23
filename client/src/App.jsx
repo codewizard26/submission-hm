@@ -104,7 +104,7 @@ class App extends Component {
           <div className='row'>
             <main role='main' className='col-lg-12 d-flex text-center'>
               <div className='content mr-auto ml-auto'>
-                <h1>Billing For Malls (Store Dashboard)</h1>
+                <h1>Blood-bank NFTs ( Dashboard)</h1>
 
               </div>
             </main>
