@@ -21,7 +21,7 @@ contract Cryptowiz is ERC721Connector{
 
         _cryptowizExists[_cryptowiz] = true;
     }
-    constructor() ERC721Connector("Cryptowiz","CWIZ"){
+    constructor() ERC721Connector("Kerve donation","bdc"){
         
     } 
 } 

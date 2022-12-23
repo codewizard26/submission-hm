@@ -18,8 +18,8 @@
  *
  */
 
-reqire('dotenv').config()
-const mnemonic = process.env.REACT_APP_MNEMONIC;
+require("dotenv").config();
+const mnemonicPhrase = process.env.REACT_APP_MNEMONIC;
 const infuraProjectId = process.env.REACT_APP_INFURA_ID;
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
@@ -61,18 +61,24 @@ module.exports = {
     //
     // Useful for deploying to a public network.
     // Note: It's important to wrap the provider as a function to ensure truffle uses a new provider every time.
-    goerli: {
-      provider: () => {
-        return new HDWalletProvider(mnemonic, `https://goerli.infura.io/v3/${infuraProjectId}`,)
-      },
-      network_id: 5,       // Goerli's network id
-      chain_id: 5,         // Goerli's chain id
-      gas: 4500000,        // Gas limit used for deploys.
-   // # of confirmations to wait between deployments. (default: 0)
-      timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-      skipDryRun: true     // Skip dry run before migrations? (default: false for public nets)
-    },
-    //
+  //   goerli: {
+  //     provider: () => {
+  //       return new HDWalletProvider({
+  //         mnemonic:mnemonicPhrase,
+  //         providerOrUrl:`wss://goerli.infura.io/v3/${infuraProjectId}`,  
+  //         chainId:5,
+  //     },3)
+  //     },
+  //     network_id: 5,       // Goerli's network id
+  //     chain_id: 5,         // Goerli's chain id
+  //     gas: 4500000,        // Gas limit used for deploys.
+  //  // # of confirmations to wait between deployments. (default: 0)
+  //     timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
+  //     skipDryRun: true ,
+  //        // Skip dry run before migrations? (default: false for public nets)
+     
+  //   },
+    
     // Useful for private networks
     // private: {
     //   provider: () => new HDWalletProvider(mnemonic, `https://network.io`),
