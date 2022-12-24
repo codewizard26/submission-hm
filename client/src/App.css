@@ -1,0 +1,123 @@
+
+body{
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #ea4f4c 0%, #6d0019 100%);
+}
+
+.token{
+  width: 300px;
+  box-shadow: 0 8px 16px rgba(5,5,5,0.3);
+  padding: 2px 16px;
+  margin:16px;
+  border-radius: 8px;
+}
+
+.img{
+  border:.3px rgba(#f6f3f3);
+  box-shadow:10px 10px 8px rgba(#111111);
+}
+
+.container-filed{
+  position: absolute;
+  top: 15%;
+  width: 100%;
+    
+}
+
+.navigation{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  height: 7vh;
+  background-color: #222;
+  width: 100vw;
+}
+
+.login-card{
+  display: flex;
+  width: 40vw;
+  flex-direction: column;
+  align-items: center;
+  font-style:bold;
+  background-color: #222;
+  padding-top: 15px;
+  transition: all 0.3s ease-in-out;
+  margin: 5vh auto;
+  height: 70vh;
+
+  
+} 
+
+.card-heading{
+  color: white;
+  font-size: 4rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  letter-spacing: 1.2px;
+
+  
+}
+
+.connection-status{
+  color:white;
+  float: left;
+  margin: 2rem;
+  
+}
+
+.btn-1{
+  background: rgb(13, 143, 199);
+  color: white;
+  width: 18vw;
+  border-radius: 50px;
+  height: 4rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  letter-spacing: 0.1px;
+  
+  
+}
+
+.btn-2{
+  background: rgb(13, 143, 199);
+  color: white;
+  width: 18vw;
+  border-radius: 50px;
+  height: 4rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  letter-spacing: 0.1px;
+  
+  
+}
+
+  
+.btn-3
+{
+  background: rgb(82, 225, 98);
+  color: white;
+  width: 18vw;
+  border-radius: 50px;
+  height: 4rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  letter-spacing: 0.1px;
+  
+  
+}
+
+.new1{
+  border: 5px solid white;
+}
+
+
+  
+  
