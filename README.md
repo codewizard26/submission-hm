@@ -1,6 +1,12 @@
-# React Truffle Box
+# Kerve-donation
 
-This box comes with everything you need to start using Truffle to write, compile, test, and deploy smart contracts, and interact with them from a React app.
+This dapp is build on erc-721 standards where the person donating the blood will get an nft in his/her wallet after the blood bank will mint the nft and will be later tranferring it to the wallet address of the person donating the blood
+This app is made for public welfare where each one can be beneffited by taking advantage of the nft in the case of emergency 
+
+we are using unstoppable domain to login using the wallet into the user or the blood bank wallet so make sure to create your free domain as well
+https://unstoppabledomains.com/auth
+
+The functionality of tranferring nft on the frontend and integration of coinbase for wallet and filecoin for the storage of nft will be done in V2
 
 ## Installation
 
@@ -13,6 +19,17 @@ Run the `unbox` command using 1 of 2 ways.
 $ npm install -g truffle
 $ truffle unbox react
 ```
+
+# You need to run local eth provider on your system to create Contracts ABI file
+
+create the local blockchain network on ganache and import the details for the same in metamask to manually deploy the contract
+RPC Server - HTTP://127.0.0.1:8545
+Network Id - 5777
+
+```sh
+
+$truffle compile 
+$ truffle migrate --reset
 
 ```sh
 # Alternatively, run `truffle unbox` via npx
@@ -27,7 +44,7 @@ $ npm start
   Starting the development server...
 ```
 
-From there, follow the instructions on the hosted React app. It will walk you through using Truffle and Ganache to deploy the `SimpleStorage` contract, making calls to it, and sending transactions to change the contract's state.
+Click on the 
 
 ## FAQ
 
