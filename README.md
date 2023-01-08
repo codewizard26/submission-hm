@@ -1,12 +1,16 @@
-# Kerve-donation
+# Billing Dapp
 
-This dapp is build on erc-721 standards where the person donating the blood will get an nft in his/her wallet after the blood bank will mint the nft and will be later tranferring it to the wallet address of the person donating the blood
-This app is made for public welfare where each one can be beneffited by taking advantage of the nft in the case of emergency 
+The idea behind the decentralized billing system is to convert the paper bills into digital bills in the form of NFTs. So that the bills generated are unique, safe and decentralized.
+
+It will not only be beneficial for the customer to keep track of bills but also beneficial for the store that can reward their customer by increasing or decreasing the the token value on the amount of purchase done by the customer.
+
+This way stores can target more customers by increasing the token amount at the time of sale!)
+ 
 
 we are using unstoppable domain to login using the wallet into the user or the blood bank wallet so make sure to create your free domain as well
 https://unstoppabledomains.com/auth
 
-The functionality of tranferring nft on the frontend and integration of coinbase for wallet and filecoin for the storage of nft will be done in V2
+The functionality of tranferring nft on the frontend and integration of coinbase for wallet and filecoin for the storage of nft is being done
 
 ## Installation
 
