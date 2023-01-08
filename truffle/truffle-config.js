@@ -63,15 +63,11 @@ module.exports = {
     // Note: It's important to wrap the provider as a function to ensure truffle uses a new provider every time.
   //   goerli: {
   //     provider: () => {
-  //       return new HDWalletProvider({
-  //         mnemonic:mnemonicPhrase,
-  //         providerOrUrl:`wss://goerli.infura.io/v3/${infuraProjectId}`,  
-  //         chainId:5,
-  //     },3)
-  //     },
+  //       return new HDWalletProvider(mnemonicPhrase,`https://goerli.infura.io/v3/${infuraProjectId}`,1)},
   //     network_id: 5,       // Goerli's network id
   //     chain_id: 5,         // Goerli's chain id
-  //     gas: 4500000,        // Gas limit used for deploys.
+  //     gas: 300000,  
+  //     gasPrice: 10000000000,      // Gas limit used for deploys.
   //  // # of confirmations to wait between deployments. (default: 0)
   //     timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
   //     skipDryRun: true ,
