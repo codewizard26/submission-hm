@@ -11,6 +11,7 @@ we are using unstoppable domain to login using the wallet into the user or the b
 https://unstoppabledomains.com/auth
 
 The functionality of tranferring nft on the frontend and integration of coinbase for wallet and filecoin for the storage of nft is being done
+and also the functionality of converting nft to tokens and vice versa is still being done in the solidity smart contract
 
 ## Installation
 
