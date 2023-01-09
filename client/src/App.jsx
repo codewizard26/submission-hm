@@ -4,6 +4,7 @@ import detectEthereumProvider from "@metamask/detect-provider"
 import Cryptowiz from './contracts/Cryptowiz.json'
 import {MDBCard,MDBCardBody,MDBCardTitle,MDBCardText,MDBCardImage,MDBBtn} from 'mdb-react-ui-kit'
 import './App.css';
+import Container from './components/Container';
 
 class App extends Component {
 
@@ -25,6 +26,12 @@ class App extends Component {
 
 
   }
+
+  onSubmit = (event) => {
+    event.preventDefault(event);
+    console.log(event.target.name.value);
+    console.log(event.target.email.value);
+  };
 
   async componentDidMount() {
     await this.loadWeb3();
@@ -143,7 +150,7 @@ class App extends Component {
                   <MDBCardBody className='row'>
                     <MDBCardTitle>Customer Unstoppable Domain-Name</MDBCardTitle> 
                     <MDBCardText>{this.state.cryptowiz_arr}</MDBCardText>
-                    <MDBBtn onClick={handleClick} href={cryptowiz}>Transfer Nft to owner</MDBBtn>
+                    <Container triggerText="Tranfer NFT" onSubmit={this.onSubmit} />
                   </MDBCardBody>
                   </MDBCard>
                  </div>
