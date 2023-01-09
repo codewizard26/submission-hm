@@ -56,7 +56,7 @@ function Main(props) {
         })
     }
     console.log(localStorage)
-    if (localStorage){
+    if (localStorage.getItem("username")){
       setUserName(JSON.parse(localStorage.getItem("username")).value)
     }
     console.log(userName)
@@ -113,8 +113,6 @@ const walletinfo = () =>{
       <br></br>
       <br></br>
 
-
-      <h2> Last Session Wallet : {userName}</h2>
 
 
 
