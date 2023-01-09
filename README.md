@@ -40,6 +40,14 @@ $ truffle migrate --reset
 # Alternatively, run `truffle unbox` via npx
 $ npx truffle unbox react
 ```
+```sh
+Configure .env file
+
+REACT_APP_INFURA_ID = "146c32aeacfc46a0a614742ca437236d"
+REACT_APP_CLIENT_ID = "7d9334f3-10a7-4c7a-b2c1-43f86c042284"
+REACT_APP_REDIRECT_URI="http://localhost:3000"
+REACT_APP_MNEMONIC = "Your_wallet_secret_phrase"
+
 
 Start the react dev server.
 
@@ -49,7 +57,6 @@ $ npm start
   Starting the development server...
 ```
 
-Click on the 
 
 ## FAQ
 
