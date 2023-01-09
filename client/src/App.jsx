@@ -90,7 +90,7 @@ class App extends Component {
   }
 
   transfer = (cryptowiz) =>{
-    this.state.contract.methods.transferFrom().send('0x0b9E5C171468D67236fb26EF1c3d9128fe50C559')
+    this.state.contract.methods.transferFrom().send()
     alert("tranfer successfull")
 
 
