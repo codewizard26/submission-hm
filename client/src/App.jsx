@@ -18,8 +18,8 @@ class App extends Component {
       contract: null,
       totalSupply: 0,
       cryptowiz_arr: [],
-      recieverAccount:'0x0b9E5C171468D67236fb26EF1c3d9128fe50C559',
-      token_id:'4'
+      recieverAccount:"",
+      token_id:""
 
     }
 
@@ -90,10 +90,14 @@ class App extends Component {
   }
 
   transfer = (cryptowiz) =>{
-    this.state.contract.methods.transferFrom(cryptowiz).send({from:this.state.account,to:this.state.recieverAccount,tokenId:this.state.token_id})
-    console.log("tranfer successfull")
+    this.state.contract.methods.transferFrom().send('0x0b9E5C171468D67236fb26EF1c3d9128fe50C559')
+    alert("tranfer successfull")
 
 
+  }
+
+  handleClick =() =>{
+    console.log("Tranfering NFT")
   }
 
   render() {
@@ -112,7 +116,7 @@ class App extends Component {
           <div className='row'>
             <main role='main' className='col-lg-12 d-flex text-center'>
               <div className='content mr-auto ml-auto'>
-                <h1>Blood-bank NFTs ( Dashboard)</h1>
+                <h1>Bill NFTs generator ( Dashboard)</h1>
 
               </div>
             </main>
@@ -139,10 +143,7 @@ class App extends Component {
                   <MDBCardBody className='row'>
                     <MDBCardTitle>Customer Unstoppable Domain-Name</MDBCardTitle> 
                     <MDBCardText>{this.state.cryptowiz_arr}</MDBCardText>
-                    <MDBBtn onClick={(event) => {
-            event.preventDefault()
-            let cryptowiz = this.cryptoWiz.value
-            this.transfer(cryptowiz)}} href={cryptowiz}>Transfer Nft to owner</MDBBtn>
+                    <MDBBtn onClick={handleClick} href={cryptowiz}>Transfer Nft to owner</MDBBtn>
                   </MDBCardBody>
                   </MDBCard>
                  </div>
