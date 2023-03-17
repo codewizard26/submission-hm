@@ -1,4 +1,4 @@
-const Cryptowiz = artifacts.require("Cryptowiz");
+const Cryptowiz = artifacts.require("Cryptowiz.sol");
 module.exports = function(deployer){
     deployer.deploy(Cryptowiz);
 };
